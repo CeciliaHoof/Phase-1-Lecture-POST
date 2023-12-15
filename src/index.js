@@ -41,7 +41,7 @@ function handleAddNewChar(e){
     let newCharObj = {
         name : (e.target.name.value),
         image : (e.target.image.value),
-        age : (e.target.age.value),
+        age : parseInt((e.target.age.value)),
     }
     //console.log(newCharObj);
     fetch("http://localhost:3000/characters", {
