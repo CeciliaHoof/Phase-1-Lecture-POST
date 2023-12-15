@@ -53,6 +53,12 @@
       "name": "Christopher Robin",
       "image": "https://upload.wikimedia.org/wikipedia/en/e/e1/Christopherrobin.jpg",
       "age": 9
+    },
+    {
+      "name": "Pickles",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPEt6-qOcaCnp2BURhtPiT3ElYWfYWrtsOxmzA9Socq6fUD9-b2khfyJP0RzVkJ0X4anc&usqp=CAU",
+      "age": "4",
+      "id": 10
     }
   ]
 }

@@ -1,5 +1,8 @@
 // fetches information from API endpoint and processes it into usable code
 // TODO: write GET request here
+fetch("http://localhost:3000/characters")
+    .then((resp) => resp.json())
+    .then((data) => renderCharacters(data))
 
 function renderCharacters(charArr) {
     // console.log(charArr)
@@ -32,3 +35,26 @@ function renderCharacters(charArr) {
 
     })
 }
+
+function handleAddNewChar(e){
+    e.preventDefault();
+    let newCharObj = {
+        name : (e.target.name.value),
+        image : (e.target.image.value),
+        age : (e.target.age.value),
+    }
+    //console.log(newCharObj);
+    fetch("http://localhost:3000/characters", {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newCharObj)
+    })
+    .then((resp) => resp.json())
+    .then((data) => renderCharacters([data]))
+}
+
+const form = document.querySelector('form');
+form.addEventListener('submit', (e) => handleAddNewChar(e));
